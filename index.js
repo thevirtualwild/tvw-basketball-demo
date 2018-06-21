@@ -24,7 +24,7 @@ var courtnames = {};
 var roomnames = {};
 
 
-console.dir(config_base);
+// console.dir(config_base);
 
 var connectedcourts = {};
 
@@ -193,9 +193,9 @@ function getScoresFromAirtable() {
   }, function done(err) {
     if (err) { console.error(err); return; }
 
-    // // // // // // // console.dir(allteams);
-    // // // // // // // // // console.log('teamindex:');
-    // // // // // // // console.dir(teamindex);
+    console.dir(allteams);
+    console.log('teamindex:');
+    console.dir(teamindex);
   });
 }
 
@@ -366,15 +366,15 @@ function onConnection(socket) {
       allcourts[somecourt.id] = somecourt;
       courtnames[somecourt.name] = somecourt;
 
-      console.log('somecourt');
-      console.dir(somecourt);
+      // console.log('somecourt');
+      // console.dir(somecourt);
 
-      config_base('Courts').update(somecourt.id, {
-        "Room": [ somecourt.room ]
-      }, function(err, record) {
-          if (err) { console.error(err); return; }
-          console.log('room - ' + record.get('Room'));
-      });
+      // config_base('Courts').update(somecourt.id, {
+      //   "Room": [ somecourt.room ]
+      // }, function(err, record) {
+      //     if (err) { console.error(err); return; }
+      //     console.log('room - ' + record.get('Room'));
+      // });
 
       assignCourtToRoom(somecourt, roomid);
     } else {
@@ -665,8 +665,11 @@ function onConnection(socket) {
 
 
   function addCourtGameScore(courtgamedata) {
-    // console.log('add score to database socket.gamename - ' + socket.gamename);
+    console.log('add score to database socket.gamename - ' + socket.gamename);
     // console.dir(courtgamedata);
+
+
+    pushScoreToDatabase(courtgamedata);
 
 
     var thisgamesroom = roomnames[socket.roomname];
@@ -718,7 +721,7 @@ function onConnection(socket) {
 
 
 
-    pushScoreToDatabase(courtgamedata);
+    // pushScoreToDatabase(courtgamedata);
 
   }
 
@@ -727,6 +730,15 @@ function onConnection(socket) {
     playerteam = teamindex[data.player.team.name];
     // // // // // // // // console.log(playerteam);
     playerscore = data.player.score;
+
+    console.log('oldteamscores');
+    console.dir(teamscores);
+    oldteam = teamscores[data.player.team.name];
+    oldteam.score += playerscore;
+    teamscores[data.player.team.name] = oldteam;
+
+    console.log('newteamscores');
+    console.dir(teamscores);
 
     if (playerscore > 0) {
 

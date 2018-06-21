@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Basketball Input</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="player.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119746891-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119746891-1');
+  </script>
+
+</head>
+<body>
+  <div id="background">
+    <img src="/babylon/assets/UI/Mobile/MobileGround.png">
+  </div>
+  <div id="headerInstructions">
+    <img id="triangle" src="/babylon/assets/UI/Mobile/MobileArrowIcon.png">
+    <h2 class="instructions"><i>SWIPE UP TO SHOOT</i></h2>
+  </div>
+  <ul class="pages ">
+    <li class="passcode page">
+
+      <div class="form">
+        <h3 class="title"><i>ENTER CODE ON SCREEN</i></h3>
+        <input class="passcodeInput" type="text" maxlength="14" style="text-transform:uppercase" />
+        <img src="/babylon/assets/UI/Mobile/MobileDash.png">
+        <h2 class="errorMessage"></h2>
+      </div>
+    </li>
+    <li class="player page">
+      <div id="refreshLogo">
+        <img id ="refresh" src="/babylon/assets/UI/Mobile/MobileRefreshBtnIcon.png">
+      </div>
+      <div class="form">
+        <h2 class="firstName"><i>SHOOTER</i></h2>
+        <h2 class="lastName"><i>MCGEE</i></h2>
+        <img class = "playerDash" src="/babylon/assets/UI/Mobile/MobileDash.png">
+        <!--<input class="passcodeInput" type="text" maxlength="14" style="text-transform:uppercase" />-->
+        <h2 class="teamColor"><i>RED</i></h2>
+        <h2 class="teamLabel">TEAM</h2>
+      </div>
+    </li>
+    <!-- <li class="gameplay page">
+      <div class="form">
+
+      </div>
+    </li> -->
+    <li class="gameover page">
+      <div class="form">
+        <h2 class="thank">THANK</h2>
+        <h2 class="you">YOU!</h2>
+        <img class = "dash" src="/babylon/assets/UI/Mobile/MobileDash.png">
+        <img class = "button" src="/babylon/assets/UI/Mobile/MobilePlayAgainBtn.png">
+      </div>
+    </li>
+  </ul>
+
+  <div id="footerLogo">
+    <img class="gameLogo" src="/babylon/assets/UI/Common/ShotClockLogo.png">
+    <div id="brought-by">
+      <h2>Brought To You By</h2>
+      <img class="sponsorLogo" src="/babylon/assets/UI/Common/ab-logo.gif">
+    </div>
+  </div>
+
+
+  <canvas id = "canvas"></canvas>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+  <script src="/babylon/babylon.custom.js"></script>
+  <script src="/babylon/scripts/playerInfo.js"></script>
+  <script src="/scripts/UI/gameover.js"></script>
+  <script src="/scripts/UI/gameplay.js"></script>
+  <script src="/scripts/UI/customize.js"></script>
+  <script src="/scripts/UI/input.js"></script>
+  <script src="/player.js"></script>
+
+</body>
+
+</html>

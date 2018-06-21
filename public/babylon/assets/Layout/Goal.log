@@ -1,0 +1,49 @@
+Exporter version: 5.6.2, Blender version: 2.79 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		inline textures:  false
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory:  C:\Users\steve\Documents\GIT Projects\Ampthink Basketball\public\babylon\assets\Layout\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  Goal_Lights_Backboard
+		processing begun of Standard material:  Goal_Lights
+		num positions      :  202
+		num normals        :  202
+		num uvs            :  404
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  276
+	processing begun of mesh:  Goal_Backboard
+		processing begun of Standard material:  Goal
+		num positions      :  584
+		num normals        :  584
+		num uvs            :  1168
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1122
+	processing begun of mesh:  Goal_Rim
+		registered as also a user of material:  Goal
+		num positions      :  232
+		num normals        :  232
+		num uvs            :  464
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  672
+	processing begun of mesh:  Goal_Base
+		registered as also a user of material:  Goal
+		num positions      :  277
+		num normals        :  277
+		num uvs            :  554
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  432
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.0868 secs

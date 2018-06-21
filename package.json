@@ -1,0 +1,24 @@
+{
+  "name": "tvw-basketball-demo",
+  "version": "1.0.0",
+  "description": "Basketball Game for multiple screens",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.5.3",
+    "babylonjs": "^3.2.0-beta.5",
+    "babylonjs-materials": "^3.2.0-beta.5",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "promise": "^8.0.1",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

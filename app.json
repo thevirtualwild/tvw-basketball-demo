@@ -1,0 +1,22 @@
+{
+  "name": "TVW-Basketball-Demo",
+  "description": "Basketball Game Created by The Virtual Wild",
+  "website": "https://github.com/thevirtualwild/tvw-basketball-demo",
+  "repository": "https://github.com/thevirtualwild/tvw-basketball-demo",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ],
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
+}

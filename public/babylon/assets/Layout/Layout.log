@@ -1,0 +1,107 @@
+Exporter version: 5.6.2, Blender version: 2.79 (sub 0)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used:
+		selected layers only:  false
+		inline textures:  false
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		texture directory:  C:\Users\steve\Documents\GIT Projects\Ampthink Basketball\public\babylon\assets\Layout\
+	Python World class constructor completed
+	WARNING: No active camera has been assigned, or is not in a currently selected Blender layer
+	processing begun of mesh:  ArenaPanels
+		WARNING: No materials have been assigned: 
+		num positions      :  17
+		num normals        :  17
+		num uvs            :  34
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  24
+	processing begun of mesh:  Panel_L_LightSkirt
+		processing begun of Standard material:  LightSkirt
+		num positions      :  34
+		num normals        :  34
+		num uvs            :  68
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  96
+	processing begun of mesh:  Panel_L
+		processing begun of Standard material:  Layout
+		num positions      :  64
+		num normals        :  64
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  138
+	processing begun of mesh:  Panel_R_LightSkirt
+		registered as also a user of material:  LightSkirt
+		num positions      :  34
+		num normals        :  34
+		num uvs            :  68
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  96
+	processing begun of mesh:  Panel_R
+		registered as also a user of material:  Layout
+		num positions      :  64
+		num normals        :  64
+		num uvs            :  128
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  138
+	processing begun of mesh:  LightBeam.001
+		processing begun of Standard material:  LightBeam
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  18
+	processing begun of mesh:  LightBeam.005
+		registered as also a user of material:  LightBeam
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  18
+	processing begun of mesh:  LightBeam.004
+		registered as also a user of material:  LightBeam
+		num positions      :  8
+		num normals        :  8
+		num uvs            :  16
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  18
+	processing begun of mesh:  LightBeam.003
+		mesh is an instance of :  LightBeam.004.  Processing halted.
+	processing begun of mesh:  CameraProxy
+		processing begun of Standard material:  Default-Material.001
+		num positions      :  24
+		num normals        :  24
+		num uvs            :  48
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  36
+	processing begun of mesh:  Glow_Floor
+		processing begun of Standard material:  Glow
+		num positions      :  556
+		num normals        :  556
+		num uvs            :  0
+		num uvs2           :  0
+		num colors         :  0
+		num indices        :  1668
+	processing begun of mesh:  Floor
+		registered as also a user of material:  Layout
+		num positions      :  11
+		num normals        :  11
+		num uvs            :  22
+		num uvs2           :  0
+		num colors         :  44
+		num indices        :  36
+========= Writing of scene file started =========
+========= Writing of scene file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.0682 secs

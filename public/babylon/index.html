@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Court</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="court.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119746891-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-119746891-1');
+  </script>
+
+</head>
+<body>
+  <!-- <ul class="pages">
+    <li class="passcode page">
+      <div class="form">
+        <h3 class="title">Please Enter the Room Code</h3>
+        <input class="passcodeInput" type="text" maxlength="14" style="text-transform:uppercase" />
+      </div>
+    </li>
+  </ul> -->
+
+  <div id="template">
+    <img src="assets/UI/D4template.png" id="templateImg">
+  </div>
+
+  <div id="scoreLabel">
+  </div>
+
+  <div id="attractLabel">
+  </div>
+
+  <div id="fpsLabel"></div>
+  <div id="fpsLabel-bot"></div>
+
+  <div id="permanentGameBranding">
+    <header>
+      <div id="titleTopLeft">
+        <img src="assets/UI/Common/LogoLights.png" id="titleLights">
+        <img src="assets/UI/Common/ShotClockLogo.png" id="titleLogo">
+      </div>
+    </header>
+
+    <div id="inner">
+      <div id="container">
+
+
+        <div id="comboBadge">
+          <img class = "sparkle" src="assets/UI/D3/ComboFlareGround.png">
+          <h2 id="comboNum">
+            3
+          </h2>
+          <h2 id="streak">
+            Streak!
+          </h2>
+        </div>
+
+
+        <div id="results">
+          <div id="leftLight">
+
+          </div>
+          <div id="rightLight">
+
+          </div>
+          <div id="playerScores">
+            <div id="topScore" class="score">
+              <div class="scoreContainer">
+                <div class="scoreNum">50 </div>
+                <div class="playerName">
+                  <div class="firstName">SHOT</div>
+                  <div class="lastName">MASTER</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="yourScore" class="score">
+              <div class="scoreContainer">
+                <div class="scoreNum">23</div>
+                <div class="playerName">
+                  <div class="firstName">SHOOTER</div>
+                  <div class="lastName">MCGEE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="teamScores">
+            <h2>Team Score Totals</h2>
+            <div id="team1" class="score">
+              <div class="scoreNum">100</div>
+              <div class="teamName"><i>RED</i></div>
+            </div>
+            <div id="team2" class="score">
+              <div class="scoreNum">30</div>
+              <div class="teamName"><i>WHITE</i></div>
+            </div>
+            <div id="team3" class="score">
+              <div class="scoreNum">80</div>
+              <div class="teamName"><i>BLUE</i></div>
+            </div>
+          </div>
+
+          <!-- end of results -->
+        </div>
+        <!-- end of container -->
+      </div>
+    </div>
+
+    <div id="preFooter">
+      <div id="playNow">
+        <h2>
+          PLAY <span class="emphasize">NOW!</span>
+        </h2>
+      </div>
+    </div>
+    <footer>
+      <div id="footerLeft">
+
+        <div class="attractLeft">
+          <h2>step</h2>
+          <h2 class="stepNum">1</h2>
+        </div>
+
+        <div class="attractRight">
+          <h2>TEXT '<span id="textCode">BBALL</span>'</h2>
+          <h2>TO <span id="textNum">12345</span></h2>
+        </div>
+
+        <div class="waitingLeft">
+          <h2 class="textCountdown">30</h2>
+        </div>
+
+        <div class="gameplayLeft">
+          <h2 class="textScore">7</h2>
+          <h2 class="textScoreLabel">SCORE</h2>
+        </div>
+
+      </div>
+
+      <div id="footerCenter">
+
+          <div class="attractLeft">
+            <h2>
+              step
+            </h2>
+            <h2 class="stepNum">
+              2
+            </h2>
+          </div>
+
+        <div class="waitingRight">
+          <h2 class="textWaiting">WAITING FOR OTHER</br> PLAYERS TO JOIN...</h2>
+        </div>
+
+        <div class="gameplayRight">
+          <h2 class="textGameplayFirst">SHOOTER</h2>
+          <h2 class="textGameplayLast">MCGEE</h2>
+        </div>
+
+          <div class="attractRight">
+            <h2>THEN ENTER</h2>
+            <h2>CODE '<span id="courtCode">12345</span>'</h2>
+          </div>
+      </div>
+
+      <div id="footerRight">
+        <img src="assets/UI/Common/SponsorGround.png" id="sponsorGround">
+        <img src="assets/UI/Common/ab-logo.gif" id="sponsorLogo">
+      </div>
+    </footer>
+
+  </div>
+
+
+  <canvas id="canvas"></canvas>
+
+
+  <!--<table id="list-top"></table>-->
+  <!--<table id="list-bot"></table>-->
+
+
+
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/babylon/babylon.custom.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+
+
+  <!--<script>-->
+
+
+    <!--// NOTE: window.RTCPeerConnection is "not a constructor" in FF22/23-->
+    <!--var RTCPeerConnection = /*window.RTCPeerConnection ||*/ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;-->
+
+    <!--if (RTCPeerConnection) (function () {-->
+      <!--var rtc = new RTCPeerConnection({iceServers:[]});-->
+      <!--if (1 || window.mozRTCPeerConnection) {      // FF [and now Chrome!] needs a channel/stream to proceed-->
+          <!--rtc.createDataChannel('', {reliable:false});-->
+      <!--};-->
+
+      <!--rtc.onicecandidate = function (evt) {-->
+          <!--// convert the candidate to SDP so we can run it through our general parser-->
+          <!--// see https://twitter.com/lancestout/status/525796175425720320 for details-->
+          <!--if (evt.candidate) grepSDP("a="+evt.candidate.candidate);-->
+      <!--};-->
+      <!--rtc.createOffer(function (offerDesc) {-->
+          <!--grepSDP(offerDesc.sdp);-->
+          <!--rtc.setLocalDescription(offerDesc);-->
+      <!--}, function (e) { console.warn("offer failed", e); });-->
+
+
+      <!--var addrs = Object.create(null);-->
+      <!--addrs["0.0.0.0"] = false;-->
+      <!--function updateDisplay(newAddr) {-->
+          <!--if (newAddr in addrs) return;-->
+          <!--else addrs[newAddr] = true;-->
+          <!--var displayAddrs = Object.keys(addrs).filter(function (k) { return addrs[k]; });-->
+          <!--document.getElementById('list-top').textContent = displayAddrs.join(" or perhaps ") || "n/a";-->
+          <!--document.getElementById('list-bot').textContent = displayAddrs.join(" or perhaps ") || "n/a";-->
+      <!--}-->
+
+      <!--function grepSDP(sdp) {-->
+          <!--var hosts = [];-->
+          <!--sdp.split('\r\n').forEach(function (line) { // c.f. http://tools.ietf.org/html/rfc4566#page-39-->
+              <!--if (~line.indexOf("a=candidate")) {     // http://tools.ietf.org/html/rfc4566#section-5.13-->
+                  <!--var parts = line.split(' '),        // http://tools.ietf.org/html/rfc5245#section-15.1-->
+                      <!--addr = parts[4],-->
+                      <!--type = parts[7];-->
+                  <!--if (type === 'host') updateDisplay(addr);-->
+              <!--} else if (~line.indexOf("c=")) {       // http://tools.ietf.org/html/rfc4566#section-5.7-->
+                  <!--var parts = line.split(' '),-->
+                      <!--addr = parts[2];-->
+                  <!--updateDisplay(addr);-->
+              <!--}-->
+          <!--});-->
+      <!--}-->
+    <!--})(); else {-->
+      <!--document.getElementById('list').innerHTML = "<code>ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2 | tail -n1</code>";-->
+      <!--document.getElementById('list').nextSibling.textContent = "In Chrome and Firefox your IP should display automatically, by the power of WebRTCskull.";-->
+      <!--document.getElementById('list-top').innerHTML = "<code>ifconfig | grep inet | grep -v inet6 | cut -d\" \" -f2 | tail -n1</code>";-->
+      <!--document.getElementById('list-bot').nextSibling.textContent = "In Chrome and Firefox your IP should display automatically, by the power of WebRTCskull.";-->
+    <!--}-->
+
+
+  <!--</script>-->
+
+  <script src="/babylon/babylon.objFileLoader.min.js"></script>
+  <script src="/babylon/shaders/Shaders/babylonjs.materials.js"></script>
+  <script src="/babylon/assets/babylon.cellMaterial.js"></script>
+  <script src="/babylon/assets/babylon.simpleMaterial.js"></script>
+  <script src="/babylon/scripts/playerInfo.js"></script>
+  <script src="/babylon/scripts/UI/attract.js"></script>
+  <script src="/babylon/scripts/UI/waiting.js"></script>
+  <script src="/babylon/scripts/UI/gameplay.js"></script>
+  <script src="/babylon/scripts/UI/results.js"></script>
+  <script src="/babylon/court.js"></script>
+
+
+</body>
+</html>

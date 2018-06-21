@@ -1,0 +1,18 @@
+{"producer":{"name":"Blender","version":"2.79 (sub 0)","exporter_version":"5.6.2","file":"Frame_Geo.babylon"},
+"autoClear":true,"clearColor":[0.0509,0.0509,0.0509],"ambientColor":[0,0,0],"gravity":[0,-9.81,0],
+"materials":[],
+"multiMaterials":[],
+"skeletons":[],
+"meshes":[{"name":"Frame_Geo","id":"Frame_Geo","billboardMode":0,"position":[0,0,0],"rotation":[0,0,0],"scaling":[1,1,1],"isVisible":true,"freezeWorldMatrix":false,"isEnabled":true,"checkCollisions":false,"receiveShadows":false,"pickable":true,"tags":""
+,"positions":[-0.866,0.866,-0.1589,-1,-1,0,-0.866,-0.866,-0.1589,0.866,-0.866,-0.1589,1,1,0,0.866,0.866,-0.1589,1,-1,0,-1,1,0,-0.6837,0.6837,-0.0874,-0.6837,-0.6837,-0.0874,0.6837,-0.6837,-0.0874,0.6837,0.6837,-0.0874]
+,"normals":[-0.285,0.285,-0.915,-0.454,-0.454,-0.766,-0.285,-0.285,-0.915,0.285,-0.285,-0.915,0.454,0.454,-0.766,0.285,0.285,-0.915,0.454,-0.454,-0.766,-0.454,0.454,-0.766,0.189,-0.189,-0.964,0.189,0.189,-0.964,-0.189,0.189,-0.964,-0.189,-0.189,-0.964]
+,"uvs":[0.933,0.067,1,1,0.933,0.933,0.067,0.933,0,0,0.067,0.067,0,1,1,0,0.842,0.158,0.842,0.842,0.158,0.842,0.158,0.158]
+,"indices":[0,1,2,3,4,5,2,6,3,5,7,0,8,2,9,10,5,11,9,3,10,11,0,8,0,7,1,3,6,4,2,1,6,5,4,7,8,0,2,10,3,5,9,2,3,11,5,0]
+,"subMeshes":[{"materialIndex":0,"verticesStart":0,"verticesCount":12,"indexStart":0,"indexCount":48}]
+,"instances":[]}
+],
+"morphTargetManagers":[],
+"cameras":[],
+"lights":[],
+"shadowGenerators":[]
+}

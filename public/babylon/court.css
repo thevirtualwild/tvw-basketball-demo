@@ -394,7 +394,7 @@ canvas {
 }
 #inner #container #results #teamScores .score .scoreNum {
   background: url("assets/UI/D4/TeamScoreGround.png") no-repeat top center;
-  background-size: contain;
+  background-size: cover;
   font-size: 80px;
   padding: 30px 20px 50px;
   font-weight: bold;

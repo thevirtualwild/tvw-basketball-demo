@@ -10,15 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "airtable": "^0.5.3",
-    "babylonjs": "^3.2.0-beta.5",
-    "babylonjs-materials": "^3.2.0-beta.5",
-    "ejs": "^2.5.9",
-    "express": "^4.16.3",
-    "promise": "^8.0.1",
-    "socket.io": "^2.1.0"
+    "airtable": "^0.5.8",
+    "babylonjs": "^3.3.0",
+    "babylonjs-materials": "^3.3.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "promise": "^8.0.2",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.0"
   }
 }

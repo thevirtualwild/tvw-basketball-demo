@@ -1,0 +1,12 @@
+General art
+- Background - '/babylon/assets/UI/Mobile/MobileGround.png'
+- "Swipe to shoot" Arrow - '/babylon/assets/UI/Mobile/MobileArrowIcon.png'
+- Passcode underline - '/babylon/assets/UI/Mobile/MobileDash.png'
+- Refresh Button - '/babylon/assets/UI/Mobile/MobileRefreshBtnIcon.png'
+- Play again - '/babylon/assets/UI/Mobile/MobilePlayAgainBtn.png'
+
+Branding
+- Shot Clock Challenge Logo - '/babylon/assets/UI/Common/ShotClockLogo.png'
+- Sponsor Logo - '/babylon/assets/UI/Common/ab-logo.gif'
+- Favicon - '/public/favicon.ico'
+- 

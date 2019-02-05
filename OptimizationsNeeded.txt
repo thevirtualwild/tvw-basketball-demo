@@ -1,0 +1,18 @@
+index.js needs:
+- Remove excess console logs from testing
+- Add more comments to explain each function for the server
+- Fix randomCode for "default" rooms to demo single player games
+
+public/index.html needs:
+- Update Title for Mobile input
+- Transition to .ejs?
+
+customize.js:
+- to change animations
+- to change name handling
+
+Animations can be changed through "public/scripts/UI"
+
+remove from project:
+- 2dgame
+- newgamehtml
